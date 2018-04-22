@@ -1,0 +1,37 @@
+<?php
+echo "GLOBALS";
+echo "<br />";
+print_r($GLOBALS);
+echo "<br />";
+echo "_SERVER";
+echo "<br />";
+print_r($_SERVER);
+echo "<br />";
+echo "_REQUEST";
+echo "<br />";
+print_r($_REQUEST);
+echo "<br />";
+echo "_POST";
+echo "<br />";
+print_r($_POST);
+echo "<br />";
+echo "_GET";
+echo "<br />";
+print_r($_GET);
+echo "<br />";
+echo "_FILES";
+echo "<br />";
+print_r($_FILES);
+echo "<br />";
+echo "_ENV";
+echo "<br />";
+print_r($_ENV);
+echo "<br />";
+echo "_COOKIE";
+echo "<br />";
+print_r($_COOKIE);
+echo "<br />";
+echo "_SESSION";
+echo "<br />";
+print_r($_SESSION);
+?>
