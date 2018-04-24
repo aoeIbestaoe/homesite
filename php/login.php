@@ -23,7 +23,7 @@ if ($mysqli->query("INSERT INTO login_credentials VALUES (0, 'sander', '" . pass
     echo "INSERT failed";
 }
 
-$pwd_to_check = $mysqli->query("SELECT password FROM login_credentials WHERE username = '" . $login . "'");
+$pwd_to_check = $mysqli->query("SELECT password FROM login_credentials WHERE username = '" . $login . "'")->fetch_object()->password;
 echo $pwd_to_check;
 echo "</br>";
         
