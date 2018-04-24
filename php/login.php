@@ -23,11 +23,15 @@ if ($mysqli->query("INSERT INTO login_credentials VALUES (0, 'sander', '" . pass
     echo "INSERT failed";
 }
 
-$pwd_to_check = $mysqli->query("SELECT password FROM login_credentials WHERE username = '" . $login . "'")->fetch_object()->password;
+$result = $mysqli->query("SELECT password FROM login_credentials WHERE username = '" . $login . "'");
+$pwd_to_check = $result->fetch_object()->password;
+$num_rows = $result->num_rows;
 echo $pwd_to_check;
 echo "</br>";
         
-if ($pwd_to_check === FALSE) {
+if ($result === FALSE) {
+    echo "Unknown error";
+} else if ($num_rows != 1) {
     echo "Unknown user";
 } else if (password_verify($pwd, $pwd_to_check)) {
     echo "Login succesfull!";
