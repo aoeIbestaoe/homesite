@@ -24,6 +24,9 @@ if ($mysqli->query("INSERT INTO login_credentials VALUES (0, 'sander', '" . pass
 }
 
 $pwd_to_check = $mysqli->query("SELECT password FROM login_credentials WHERE username = '" . $login . "'");
+echo $pwd_to_check;
+echo "</br>";
+        
 if ($pwd_to_check === FALSE) {
     echo "Unknown user";
 } else if (password_verify($pwd, $pwd_to_check)) {
