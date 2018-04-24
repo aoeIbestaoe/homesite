@@ -17,7 +17,7 @@ if ($mysqli->query("DROP TABLE login_credentials") === FALSE) {
 if ($mysqli->query("CREATE TABLE login_credentials ( id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, username VARCHAR(30) NOT NULL, password VARCHAR(255) NOT NULL)") === FALSE) {
     echo "CREAT TABLE failed";
 }
-if ($mysqli->query("INSERT INTO login_credentials (0, 'Sander', '" . password_hash("Test123", PASSWORD_DEFAULT ) ."' )") === FALSE) {
+if ($mysqli->query("INSERT INTO login_credentials VALUES (0, 'Sander', '" . password_hash("Test123", PASSWORD_DEFAULT ) ."' )") === FALSE) {
     echo "INSERT failed";
 }
 
