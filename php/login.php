@@ -10,7 +10,9 @@ if ($mysqli->connect_errno) {
     echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 }
 $login = filter_input(INPUT_POST, "username");
-$pwd = password_hash($_POST["password"], PASSWORD_DEFAULT );
+//$pwd = password_hash($_POST["password"], PASSWORD_DEFAULT ); -> For insert
+$pwd = $_POST["password"];
+
 if ($mysqli->query("DROP TABLE login_credentials") === FALSE) {
     echo "DROP TABLE failed";
 }
@@ -24,7 +26,7 @@ if ($mysqli->query("INSERT INTO login_credentials VALUES (0, 'sander', '" . pass
 $pwd_to_check = $mysqli->query("SELECT password FROM login_credentials WHERE username = '" . $login . "'");
 if ($pwd_to_check === FALSE) {
     echo "Unknown user";
-} else if ($pwd === $pwd_to_check) {
+} else if (password_verify($pwd, $pwd_to_check)) {
     echo "Login succesfull!";
 } else {
     echo "Wrong password";
