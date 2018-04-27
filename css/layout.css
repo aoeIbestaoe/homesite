@@ -3,15 +3,46 @@
   justify-content: center;
 }
 .center {
-  background-color: ivory;
+  background-color: #549D53;
   margin: 50px;
   padding: 25px;
-  border: 3px solid darkblue;
+  border:  4px solid #2369B8;
   border-radius: 10px;
+  color: #091034;
+
 }
 
 #home {
   background-image: url(../img/milky-way.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
+}
+
+.page {
+  background-color: #D4F7D4;
+  height: 100%;
+  width: 100%;
+}
+
+.item {
+  width: 250px;
+  height: 140px;
+  text-align: center;
+  background-color: #549D53;
+  margin: 20px;
+  border: 4px solid #2369B8;
+  padding: 25px 0 0 0;
+  font-size: 40px;
+  font-family: monospace;
+  float: left;
+  color: #091034;
+}
+
+.item.new {
+  font-size: 90px;
+}
+
+.item:hover {
+  background-color: #2369B8;
+  cursor: pointer;
 }

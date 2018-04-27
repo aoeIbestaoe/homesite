@@ -28,13 +28,13 @@ $pwd_to_check = $result->fetch_object()->password;
 $num_rows = $result->num_rows;
 echo $pwd_to_check;
 echo "</br>";
-        
+
 if ($result === FALSE) {
     echo "Unknown error";
 } else if ($num_rows != 1) {
     echo "Unknown user";
 } else if (password_verify($pwd, $pwd_to_check)) {
-    echo "Login succesfull!";
+    <?php include 'content.php'?>
 } else {
     echo "Wrong password";
 }

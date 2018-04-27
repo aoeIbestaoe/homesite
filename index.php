@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Start</title>
-        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="../css/layout.css">
     </head>
     <body id="home">
         <div class="container">
@@ -16,17 +16,17 @@
                         </tr>
                         <tr>
                            <td>Wachtwoord</td>
-                            <td><input class="inputfield" name="password" type="password" /></td> 
+                            <td><input class="inputfield" name="password" type="password" /></td>
                         </tr>
                         <tr>
                            <td></td>
-                            <td><input class="button" name="submit" type="submit"></td> 
+                            <td><input class="button" name="submit" type="submit"></td>
                         </tr>
                     </table>
 
                 </form>
             </div>
         </div>
-        
+
     </body>
 </html>
