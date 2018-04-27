@@ -34,7 +34,7 @@ if ($result === FALSE) {
 } else if ($num_rows != 1) {
     echo "Unknown user";
 } else if (password_verify($pwd, $pwd_to_check)) {
-    <?php include 'content.php'?>
+    header("Location: content.php");
 } else {
     echo "Wrong password";
 }
