@@ -1,7 +1,7 @@
 <html>
 <head>
   <title>Content</title>
-  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="../css/layout.css">
 </head>
 <body>
 <div class="page">
