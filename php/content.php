@@ -6,6 +6,12 @@
 <body>
 <div class="page">
   <div class="content">
+    <?php
+      $dir    = '/home';
+      $files1 = scandir($dir);
+
+      print_r($files1);
+    ?>
     <div class="item">Films</div>
     <div class="item">Series</div>
     <div class="item">Foto's</div>
