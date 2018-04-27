@@ -7,7 +7,7 @@
 <div class="page">
   <div class="content">
     <?php
-      $dir    = '/home';
+      $dir    = '/php';
       $files1 = scandir($dir);
 
       print_r($files1);
