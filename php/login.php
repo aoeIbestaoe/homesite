@@ -26,8 +26,6 @@ if ($mysqli->query("INSERT INTO login_credentials VALUES (0, 'sander', '" . pass
 $result = $mysqli->query("SELECT password FROM login_credentials WHERE username = '" . $login . "'");
 $pwd_to_check = $result->fetch_object()->password;
 $num_rows = $result->num_rows;
-echo $pwd_to_check;
-echo "</br>";
 
 if ($result === FALSE) {
     echo "Unknown error";
