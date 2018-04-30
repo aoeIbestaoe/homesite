@@ -7,19 +7,13 @@
 <div class="page">
   <div class="content">
     <?php
-      $dir    = '/php';
-      $files1 = scandir($dir);
+      $dir    = '../DATA';
+      $files = array_diff(scandir($dir), array('.', '..'));;
 
-      print_r($files1);
+      foreach($files as $file) {
+        echo '<div class="item" id="dir_' . $file . '">' . ucfirst($file) . '</div>';
+      }
     ?>
-    <div class="item">Films</div>
-    <div class="item">Series</div>
-    <div class="item">Foto's</div>
-    <div class="item">ToDo's</div>
-    <div class="item">Reizen</div>
-    <div class="item">Inventaris</div>
-    <div class="item">Documenten</div>
-    <div class="item">Facturen</div>
     <div class="item new">+</div>
   </div>
 </div>
